@@ -1,3 +1,6 @@
+### dotenv ###
+.env
+
 ### Emacs ###
 # -*- mode: gitignore; -*-
 *~
@@ -359,6 +362,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-### dotenv ###
-.env
