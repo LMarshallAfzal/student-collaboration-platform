@@ -359,3 +359,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+### dotenv ###
+.env
