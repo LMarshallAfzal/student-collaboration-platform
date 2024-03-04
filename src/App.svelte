@@ -2,10 +2,13 @@
   import svelteLogo from './assets/svelte.svg'
   import viteLogo from '/vite.svg'
   import Counter from './lib/Counter.svelte'
+  import LoginFrom from './components/login/LoginForm.svelte';
+  import LoginForm from './components/login/LoginForm.svelte';
 </script>
 
 <main>
-  <div>
+  <LoginForm />
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src={viteLogo} class="logo" alt="Vite Logo" />
     </a>
@@ -25,10 +28,10 @@
 
   <p class="read-the-docs">
     Click on the Vite and Svelte logos to learn more
-  </p>
+  </p> -->
 </main>
 
-<style>
+<!-- <style>
   .logo {
     height: 6em;
     padding: 1.5em;
@@ -44,4 +47,4 @@
   .read-the-docs {
     color: #888;
   }
-</style>
+</style> -->
