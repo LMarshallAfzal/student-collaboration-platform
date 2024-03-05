@@ -67,7 +67,10 @@
 
   .login-container {
     background-color: white;
+    background-image: url('../../assets/3948.jpg');
+    background-size: cover;
     width: 850px;
     border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
 </style>
