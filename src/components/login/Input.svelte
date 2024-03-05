@@ -3,15 +3,18 @@
     export let value: string = '';
     export let placeholder: string = '';
     export let error: boolean = false; 
-    export let type: 'text' | 'password' | 'email' = 'text';
+    export let currentType: 'text' | 'password' | 'email' = 'text';
 </script>
   
 <div class="input-container {error ? 'input-error' : ''}">
   <label for={label}>{label}</label>
-  {#if type === 'text'}
+
+  {#if currentType === 'text'}
       <input type="text" bind:value placeholder={placeholder}>
-  {:else if type === 'password'}
-      <input type="password" bind:value placeholder={placeholder}>
+  {:else if currentType === 'email'}
+      <input type="email" bind:value placeholder={placeholder} />
+  {:else if currentType === 'password'} 
+      <input type="password" bind:value placeholder={placeholder} />
   {/if}
 
   {#if error}
@@ -20,16 +23,19 @@
 </div>
   
 <style>
-  .input-container { 
+  .input-container {
+    height: 40px; 
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
   }
   
   input {
-    padding: 10px;
-    border: 1px solid #ccc;
+    height: 40px;
     border-radius: 4px;
+    border: 1px solid #000000;
+    background-color: white;
   }
   
   .input-error input {

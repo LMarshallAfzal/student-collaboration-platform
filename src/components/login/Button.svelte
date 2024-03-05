@@ -10,11 +10,11 @@
   
 <style>
   button {
-    padding: 10px 20px;
-    background-color: #0073b1; /* LinkedIn blue */
+    width: 98%;
+    background-color: #0073b1;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     cursor: pointer;
   }
   
