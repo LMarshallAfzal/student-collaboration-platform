@@ -1,5 +1,4 @@
 <script>
-  import { navigate } from "svelte-routing";
   import { Link } from 'svelte-routing';
   import Button from "../components/Button.svelte";
 </script>

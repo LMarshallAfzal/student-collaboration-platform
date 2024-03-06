@@ -1,16 +1,23 @@
 <script>
   import Input from "../Input.svelte";
   import Button from "../Button.svelte";
-  // import { supabase } from "../../lib/supabaseClient";
+  import { user } from "../../lib/stores";
+  import { supabase } from "../../lib/supabaseClient";
   let email = "";
   let password = "";
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    // try {
-    //   const  { error } = await supabase.auth.signIn({ email, password })
-    // } 
-    console.log("Form submitted! (Functionality to be added later)");
+  const handleSubmit = async () => {
+    try {
+      let { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      })
+      if (error) throw error;
+
+      $user = data.user;
+    } catch (error) {
+      console.error("Login Error: ", error.message)
+    }
   };
 </script>
 

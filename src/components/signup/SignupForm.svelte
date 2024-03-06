@@ -1,16 +1,27 @@
 <script>
   import Input from "../Input.svelte";
   import Button from "../Button.svelte";
+  import { supabase } from "../../lib/supabaseClient";
   
   let name = ""
   let email = "";
   let password = "";
   let passwordConfirmation = "";
 
-  // Temporarily replace handleSubmit
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission for now
-    console.log("Form submitted! (Functionality to be added later)");
+  const handleSubmit = async () => {
+    if (password !== passwordConfirmation) {
+      alert("Passwords don't match");
+      return;
+    }
+
+    try {
+      let { error } = await supabase.auth.signUp({email, password });
+      if (error) throw error;
+
+      alert('Sign up successful')
+    } catch (error) {
+      alert(error.message);
+    }
   };
 </script>
 
