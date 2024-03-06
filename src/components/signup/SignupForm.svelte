@@ -1,6 +1,6 @@
 <script>
-  import Input from "../login/Input.svelte";
-  import Button from "../login/Button.svelte";
+  import Input from "../Input.svelte";
+  import Button from "../Button.svelte";
   
   let name = ""
   let email = "";

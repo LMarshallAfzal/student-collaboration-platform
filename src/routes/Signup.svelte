@@ -1,5 +1,5 @@
 <script>
-  import SignupForm from "../signup/SignupForm.svelte";
+  import SignupForm from "../components/signup/SignupForm.svelte";
 </script>
 
 <div class="app-wrapper">

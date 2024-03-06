@@ -1,7 +1,7 @@
 <script>
   import { navigate } from "svelte-routing";
   import { Link } from 'svelte-routing';
-  import Button from "../login/Button.svelte";
+  import Button from "../components/Button.svelte";
 </script>
 
 <div class="home-container">

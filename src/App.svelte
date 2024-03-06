@@ -1,8 +1,8 @@
 <script>
   import { Router, Route } from 'svelte-routing';
-  import Login from './components/login/Login.svelte';
-  import Home from './components/home/Home.svelte';
-  import Signup from './components/signup/Signup.svelte';
+  import Login from './routes/Login.svelte';
+  import Home from './routes/Home.svelte';
+  import Signup from './routes/Signup.svelte';
 </script>
 
 <Router>

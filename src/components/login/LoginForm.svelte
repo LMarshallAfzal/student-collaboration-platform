@@ -1,12 +1,15 @@
 <script>
-  import Input from "./Input.svelte";
-  import Button from "./Button.svelte";
+  import Input from "../Input.svelte";
+  import Button from "../Button.svelte";
+  // import { supabase } from "../../lib/supabaseClient";
   let email = "";
   let password = "";
 
-  // Temporarily replace handleSubmit
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission for now
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // try {
+    //   const  { error } = await supabase.auth.signIn({ email, password })
+    // } 
     console.log("Form submitted! (Functionality to be added later)");
   };
 </script>
