@@ -1,8 +1,11 @@
 <script>
-  import Input from "./Input.svelte";
-  import Button from "./Button.svelte";
+  import Input from "../login/Input.svelte";
+  import Button from "../login/Button.svelte";
+  
+  let name = ""
   let email = "";
   let password = "";
+  let passwordConfirmation = "";
 
   // Temporarily replace handleSubmit
   const handleSubmit = (e) => {
@@ -13,17 +16,31 @@
 
 <div class="login-container">
   <form on:submit|preventDefault={handleSubmit}>
-    <h1>Sign in</h1>
+    <h1>Sign up</h1>
     <p>Collaborate with others to unleash your academic potential</p>
-    <Input currentType="email" placeholder="Email" bind:value={email} />
+    <Input 
+      currentType="text" 
+      placeholder="Name"
+      bind:value={name} 
+    /> 
+    <Input 
+      currentType="email" 
+      placeholder="Email" 
+      bind:value={email} 
+    />
     <Input
       currentType={"password"}
       placeholder="Password"
       bind:value={password}
     />
+    <Input
+      currentType={"password"}
+      placeholder="Password Confirmation"
+      bind:value={passwordConfirmation}
+    />
     <a class="forgot-password" href="#">Forgot Password?</a>
     <Button label="Submit" type="submit" />
-    <a class="forgot-password" href="/signup">New to the platform? Join now</a>
+    <a class="forgot-password" href="/login">Have an account already? Sign in</a>
   </form>
 </div>
 

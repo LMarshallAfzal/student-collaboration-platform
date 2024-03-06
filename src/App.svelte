@@ -1,14 +1,17 @@
 <script>
-  import LoginForm from './components/login/LoginForm.svelte';
+  import { Router, Route } from 'svelte-routing';
+  import Login from './components/login/Login.svelte';
+  import Home from './components/home/Home.svelte';
+  import Signup from './components/signup/Signup.svelte';
 </script>
 
-<div class="app-wrapper">
-  <main>
-      <LoginForm />   
-  </main>
-</div>
+<Router>
+  <Route path="/" component={Home} />
+  <Route path="/login" component={Login} />
+  <Route path="/signup" component={Signup} />
+</Router>
 
-<style>
+<!-- <style>
   .app-wrapper {
     display: flex;
     align-items: center;
@@ -17,4 +20,4 @@
     /* background-color: whitesmoke; */
     background-image: url('./assets/blue-wave-bg.jpg');
   }
-</style>
+</style> -->

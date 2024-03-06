@@ -36,6 +36,11 @@
     border-radius: 4px;
     border: 1px solid #000000;
     background-color: white;
+    color: black;
+  }
+
+  input:hover {
+    border: 2px solid #0073b1
   }
   
   .input-error input {
